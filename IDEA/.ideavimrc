@@ -81,3 +81,6 @@ vmap <leader><leader>w :action FJumpAction.Word0<cr>
 vmap <leader><leader>b :action FJumpAction.Word0<cr>
 vmap <leader><leader>e :action FJumpAction.WordEnd<cr>
 vmap <leader><leader>j :action FJumpAction.Line<cr>
+
+" 解决 visual 选中的情况下只能粘贴一次的问题
+vmap p P
