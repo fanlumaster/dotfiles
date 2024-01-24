@@ -1,0 +1,83 @@
+"""" 由于 idea 的某种原因，这个文件似乎一开始就在 neovim 中去修改比较合适
+""" ideavim 默认给的 GitHub 上的 example 配置
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+" 启用 vim-surround
+set surround
+set multiple-cursors
+" 支持 vim-commentary 类似的注释功能，在本文件中无法使用，idea 无法识别 .ideavimrc 文件，但是，在 java 中，我们可以使用类似 gcc 这样的命令来给代码作注释
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+" 启用 NERDTree，这样在左侧的文件目录里面就可以使用 vim 的键位进行移动
+set NERDTree
+" 启用 which-key，这个似乎会导致 idea 中的这个 ideavimrc 文件崩溃，虽然，继续去修改这个文件依然会让 idea 继续读取这个配置并生效
+" set which-key
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+" 设置可以在底部的 status bar 中显示 vim 的模式
+set showmode
+" scroll off 的行数设置成 0，这样在进行行跳转的时候，编辑器就不会自己进行器奇怪地滚动
+set so=0
+" 启用增量搜索
+set incsearch
+" 启用行号
+set nu
+
+""" Idea specific settings ------------------
+" 让 idea 的把两行加在一起的功能生效，smart join
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+" 关闭插件的蜂鸣声
+set visualbell
+" 打通系统剪贴板
+set clipboard+=unnamed
+" 设置搜索结果高亮
+set hlsearch
+
+""" Mappings --------------------------------
+" Shift + h 向左移动 tab 标签页
+nmap <S-h> <action>(PreviousTab)
+" Shift + l 向右移动 tab 标签页
+nmap <S-l> <action>(NextTab)
+" leader + h 取消搜索残留的高亮
+nmap <leader>h :noh<CR>
+" leader + w 保存当前的内容
+nmap <leader>w :w<CR>
+" leader + c 关闭当前的 editor 页
+nmap <leader>c :q<CR>
+" leader + zo 展开当前的 editor 中的所有的代码块，只是在 java 代码中生效
+nmap <leader>zo <action>(ExpandAllRegions)
+" leader + zc 折叠当前的 editor 中的所有的代码块，只是在 java 代码中生效
+nmap <leader>zc <action>(CollapseAllRegions)
+" leader + lf 格式化当前的代码
+nmap <leader>lf <action>(ReformatCode)
+" leader + o 弹出当前的文件的 Structure 面板，注意，这个可能只是在 java 代码中生效
+map <leader>o <action>(FileStructurePopup)
+" leader + e 打开左侧的 Project 栏目，这个其实不需要，使用 IDEA 中的 Alt + 1 就可以了
+" nmap <leader>e <action>(ActivateProjectToolWindow)
+" 将 ge 映射成鼠标悬浮在错误的地方上的时候显示错误提示
+map ge <Action>(ShowErrorDescription)
+" 将 gh 映射成鼠标悬浮在变量上方的时候显示文档
+map gh <Action>(QuickJavaDoc)
+
+" FJump 这里需要配合我的 FJump 插件来使用
+nmap <leader><leader>s :action FJumpAction<cr>
+nmap <leader><leader>w :action FJumpAction.Word0<cr>
+nmap <leader><leader>b :action FJumpAction.Word0<cr>
+nmap <leader><leader>e :action FJumpAction.WordEnd<cr>
+nmap <leader><leader>j :action FJumpAction.Line<cr>
+" FJump visual mode
+vmap <leader><leader>s :action FJumpAction<cr>
+vmap <leader><leader>w :action FJumpAction.Word0<cr>
+vmap <leader><leader>b :action FJumpAction.Word0<cr>
+vmap <leader><leader>e :action FJumpAction.WordEnd<cr>
+vmap <leader><leader>j :action FJumpAction.Line<cr>
