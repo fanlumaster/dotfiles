@@ -1,0 +1,264 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+f5",
+    "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus && editorLangId == 'javascript'",
+    "args": {
+      "sequence": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "node '${file}'\u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus && editorLangId == 'python'",
+    "args": {
+      "sequence": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "python '${file}'\u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "extension.multiCommand.execute",
+    "when": "editorTextFocus && editorLangId == 'lua'",
+    "args": {
+      "sequence": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "lua '${file}'\u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  },
+  // new file in explorer
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  // vim settings
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.togglePanel",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "vim.active && suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "terminal.active && terminalFocus"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // vim explorer settings
+  // new file
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // new directory
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // vim terminal
+  // 在多个 terminal 回话中移动
+  {
+    "key": "ctrl+shift+alt+j",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind && !inputFocus"
+  },
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "selectNextCodeAction",
+  //   "when": "actionWidgetVisible"
+  // },
+  // {
+  //   "key": "ctrl+k",
+  //   "command": "selectPrevCodeAction",
+  //   "when": "actionWidgetVisible"
+  // },
+  {
+    "key": "j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  // integrated terminal closing
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // resize terminal panel size
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  // maximize the terminal panel
+  {
+    "key": "ctrl+win+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  // {
+  //   "key": "/",
+  //   "command": "",
+  //   "when": "suggestWidgetVisible"
+  // },
+  // ctrl + 下箭头，减小当前的分屏 editor 的宽度
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "editorTextFocus && vim.mode == 'Normal'",
+  },
+  // ctrl + 上箭头，增大当前的分屏 editor 的宽度
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "editorTextFocus && vim.mode == 'Normal'",
+  },
+]
