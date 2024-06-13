@@ -1,0 +1,501 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": true,
+  "xml.server.binary.trustedHashes": [
+    "75545f1685acea66aed67cb886c59e49cbbf0f51c25c89baad76cf0a3ee962a7"
+  ],
+  "editor.formatOnSave": false,
+  "vim.useSystemClipboard": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // "editor.fontFamily": "'CaskaydiaCove NF Mono', 'Cascadia Mono', 'Source Han Sans CN',  '微软雅黑', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN',  '微软雅黑', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "workbench.startupEditor": "none",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  // "python.formatting.autopep8Args": [
+  //   "--ignore",
+  //   "E402"
+  // ],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnsupportedDunderAll": "none"
+  },
+  // c++ 格式化设置
+  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 260}",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 2
+  },
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true,
+    "zh-hant": true
+  },
+  // 禁用 markdown 的自动补全
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": "off",
+      "comments": "off",
+      "strings": "off"
+    }
+  },
+  "[ahk]": {
+    "files.encoding": "utf8bom",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    }
+  },
+  // 光标的动画效果
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN',  '微软雅黑', Consolas, 'Courier New', monospace",
+  "markdown.preview.fontFamily": "CaskaydiaCove NF Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  "editor.detectIndentation": false,
+  // language specification
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2,
+    // "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[lua]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[java]": {
+    "editor.tabSize": 2
+  },
+  "[vue]": {
+    "editor.tabSize": 2
+  },
+  "editor.wordWrap": "on",
+  "python.terminal.executeInFileDir": true,
+  "terminal.integrated.bellDuration": 100000,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "〇": true
+  },
+  "workbench.colorCustomizations": {
+    // "editorCursor.foreground": "#16C60C",
+    "editorCursor.foreground": "#ffb6c1",
+    "editor.lineHighlightBackground": "#292e42",
+    // 状态栏颜色设置
+    "statusBar.background": "#1e1e1e",
+    "statusBar.foreground": "#9b9b8f",
+    "statusBar.border": "#333a48"
+  },
+  "editor.minimap.autohide": true,
+  "editor.minimap.showSlider":"mouseover",
+  "editor.minimap.size": "fit",
+  "editor.minimap.maxColumn": 180,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "workbench.layoutControl.enabled": false,
+  "editor.renderLineHighlight": "line",
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  // vim settings
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-w>": false
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "leader",
+        "e"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ]
+    },
+    // run cmake project
+    {
+      "before": [
+        "leader",
+        "r",
+        "c"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        {
+          "command": "cmake.launchTarget"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "l",
+        "f"
+      ],
+      "commands": [
+        // {
+        //   "command": "workbench.action.terminal.sendSequence",
+        //   "args": {
+        //     "text": "clear \u000D"
+        //   }
+        // },
+        {
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "revealInExplorer"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "h"
+      ],
+      "commands": [
+        ":noh"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "c"
+      ],
+      "commands": [
+        ":q"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "v"
+      ],
+      "commands": [
+        ":q"
+      ]
+    },
+    // 保存，但不格式化
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.saveWithoutFormatting"
+      ]
+    },
+    // 这个保存并格式化可以用 :w 来代替
+    // {
+    //   "before": [
+    //     "leader",
+    //     "q"
+    //   ],
+    //   "commands": [
+    //     ":w"
+    //   ]
+    // },
+    {
+      "before": [
+        "leader",
+        "a"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.toggleActivityBarVisibility"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.toggleStatusbarVisibility"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "p",
+        "y"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "python '${file}'\u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    // leader + tf => toggle terminal
+    {
+      "before": [
+        "leader",
+        "t",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal",
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "r",
+        "u"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "ruby '${file}'\u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    // autohotkey
+    {
+      "before": [
+        "leader",
+        "k",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "${file} \u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    // 在 terminal 中执行 haskell 程序
+    {
+      "before": [
+        "leader",
+        "r",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear \u000D"
+          }
+        },
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "runhaskell ${file} \u000D"
+          }
+        },
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "g",
+        "g"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "g",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "workbench.view.search"
+        }
+      ]
+    },
+    // run java codes
+    {
+      "before": [
+        "leader",
+        "j",
+        "a"
+      ],
+      "commands": [
+        {
+          "command": "java.debug.runJavaFile"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "r"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.debug.start"
+        }
+      ]
+    }
+    // {
+    //   "key": "ctrl+f5",
+    //   "command": "workbench.action.debug.run",
+    //   "when": "debuggersAvailable && debugState != 'initializing'"
+    // },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
+    },
+    {
+      "before": [
+        "C-r"
+      ],
+      "commands": [
+        "redo"
+      ]
+    }
+  ],
+  // vim 的 easymotion 插件的高亮字符的前景色
+  "vim.easymotionMarkerForegroundColorOneChar": "#DF5452",
+  // 关闭 snippet 的阻止快速建议的行为
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  // 开启 vim-surround
+  "vim.surround": true,
+  // 扩展忽视建议
+  "extensions.ignoreRecommendations": true,
+  // cmake 配置
+  "cmake.configureOnOpen": true,
+  // 编辑器内联的建议
+  "editor.inlineSuggest.enabled": true,
+  // 关闭 terminal 中的多行粘贴的警告
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  // 窗口的缩放程度
+  "window.zoomLevel": 1,
+  // 关闭不明 unicode 字符的高亮
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // hidden breadcrumbs in editors
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "all",
+  "maven.executable.path": "C:\\FDisk\\Maven\\apache-maven-3.9.4\\bin\\mvn",
+  "java.configuration.maven.globalSettings": "C:\\FDisk\\Maven\\apache-maven-3.9.4\\conf\\settings.xml",
+  "workbench.editor.tabActionCloseVisibility": true,
+  "cmake.showOptionsMovedNotification": false,
+  "window.menuBarVisibility": "hidden",
+  // 修改窗口的风格为 windows 原生风格
+  "window.titleBarStyle": "native",
+  "window.commandCenter": false,
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "hidden",
+  // "window.title": "Atom"
+}
