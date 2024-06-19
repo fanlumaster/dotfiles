@@ -7,6 +7,7 @@
 <!j::SendInput("{Down}")
 <!k::SendInput("{Up}")
 <!l::SendInput("{Right}")
+#HotIf
 
 ; 窗口的 resize 和移动相关
 
