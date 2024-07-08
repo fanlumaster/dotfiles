@@ -6,11 +6,10 @@
 #       CapsLock: Esc
 # device:
 #   only: ''
-# 在某些应用程序中映射方向键的快捷键，这里映射成 Alt + hjkl
 keymap:
   - name: Emacs binding
     application:
-      only: [firefox, Google-chrome]
+      only: [firefox, Google-chrome, systemsettings]
     remap:
       M-h: left
       M-l: right
