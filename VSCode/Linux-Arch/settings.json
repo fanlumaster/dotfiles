@@ -2,7 +2,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
   "vim.useSystemClipboard": true,
-  "workbench.iconTheme": "material-icon-theme",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN', '微软雅黑', Consolas, 'Courier New', monospace",
@@ -18,7 +17,7 @@
     "reportUnsupportedDunderAll": "none"
   },
   // c++ 格式化设置
-  "C_Cpp.clang_format_style": "{BasedOnStyle: Microsoft, IndentWidth: 4, ColumnLimit: 260}",
+  // "C_Cpp.clang_format_style": "{BasedOnStyle: Microsoft, IndentWidth: 4, ColumnLimit: 260}",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.tabSize": 2
@@ -93,6 +92,7 @@
   "workbench.colorCustomizations": {
     // "editorCursor.foreground": "#16C60C",
     "editorCursor.foreground": "#ffb6c1",
+    // "editorCursor.foreground": "#ffffff",
     "editor.lineHighlightBackground": "#292e42",
     // 状态栏颜色设置
     "statusBar.background": "#1e1e1e",
@@ -222,6 +222,29 @@
     //     ":w"
     //   ]
     // },
+    {
+      "before": [
+        "leader",
+        "leader",
+        "q"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.closeWindow"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "c"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.closeEditorInAllGroups"
+        }
+      ]
+    },
     {
       "before": [
         "leader",
@@ -457,10 +480,30 @@
   // hidden breadcrumbs in editors
   "breadcrumbs.enabled": false,
   "editor.renderWhitespace": "all",
-  "workbench.editor.tabActionCloseVisibility": false,
+  "workbench.editor.tabActionCloseVisibility": true,
   "window.menuBarVisibility": "hidden",
   // 修改窗口的风格为系统原生风格
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
+  "window.dialogStyle": "custom",
   "window.commandCenter": false,
-  "workbench.activityBar.location": "hidden",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  // 针对 Hyprland 中的标题栏作一些配置
+  "apc.stylesheet": {
+    // ".monaco-workbench .part.editor>.content .editor-group-container>.title div.tabs-container": "border-radius: 5px; font-family: 'Times New Roman', Times, serif;",
+    // ".titlebar-left": "display: none !important;",
+    // ".titlebar-right": "display: none !important;",
+  },
+  "animations.Install-Method": "Apc Customize UI++",
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+  ],
+  "animations.CursorAnimation": true,
+  // 设置一些光标动画插件的特定选项
+  "animations.CursorAnimationOptions": {
+    "Color": "#ffb6c1",
+    "CursorStyle": "block",
+    "TrailLength": 8
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.activityBar.location": "hidden"
 }
