@@ -14,7 +14,12 @@ Invoke-Expression (&starship init powershell)
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # chcp 65001
 # cls
-Set-PSReadLineOption -EditMode Emacs # Set shortcuts mode
+# Set shortcuts mode
+Set-PSReadLineOption -EditMode Emacs
+# use Alt + l to replace right arrow when we need to receive suggestion
+Set-PSReadLineKeyHandler -Chord "Alt+l" -Function ForwardWord
+# disable bell/beep sound
+Set-PSReadlineOption -BellStyle None
 
 function cdnvim()
 {
