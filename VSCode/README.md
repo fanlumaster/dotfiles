@@ -6,6 +6,12 @@
 - VSCode Animations
 - Vim
 
+## Windows
+
+使用 APC 时，注意权限的问题，插件仓库的文档写得也是很清楚的。
+
+## Linux
+
 使用 APC 时，需要执行一个命令，
 
 ```bash
