@@ -100,11 +100,11 @@
     "statusBar.border": "#333a48"
   },
   "editor.minimap.autohide": true,
-  "editor.minimap.enabled": false,
   "editor.hideCursorInOverviewRuler": true,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.verticalScrollbarSize": 0, // hide the vertical scroll bar
+  "editor.scrollbar.horizontalScrollbarSize": 0, // hide the horizontal scroll bar
   "workbench.layoutControl.enabled": false,
   "editor.renderLineHighlight": "line",
   "editor.occurrencesHighlight": "off",
@@ -471,7 +471,7 @@
   // 关闭 terminal 中的多行粘贴的警告
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   // 窗口的缩放程度
-  "window.zoomLevel": 0.8,
+  "window.zoomLevel": 1.0,
   // 关闭不明 unicode 字符的高亮
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "css.validate": false,
@@ -487,23 +487,16 @@
   "window.dialogStyle": "custom",
   "window.commandCenter": false,
   "terminal.integrated.defaultProfile.linux": "fish",
-  // 针对 Hyprland 中的标题栏作一些配置
+  "workbench.statusBar.visible": false,
+  // 作用域的顶部给 sticky 住
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.external.linuxExec": "kitty",
   "apc.stylesheet": {
     // ".monaco-workbench .part.editor>.content .editor-group-container>.title div.tabs-container": "border-radius: 5px; font-family: 'Times New Roman', Times, serif;",
     // ".titlebar-left": "display: none !important;",
     // ".titlebar-right": "display: none !important;",
+    ".xterm-decoration-overview-ruler": "width: 0px !important;",
   },
-  "animations.Install-Method": "Apc Customize UI++",
-  "apc.imports": [
-    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
-  ],
-  "animations.CursorAnimation": true,
-  // 设置一些光标动画插件的特定选项
-  "animations.CursorAnimationOptions": {
-    "Color": "#ffb6c1",
-    "CursorStyle": "block",
-    "TrailLength": 8
-  },
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.activityBar.location": "hidden"
 }

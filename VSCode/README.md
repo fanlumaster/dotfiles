@@ -5,3 +5,11 @@
 - Apc
 - VSCode Animations
 - Vim
+
+使用 APC 时，需要执行一个命令，
+
+```bash
+sudo chown -R $(whoami) /opt/visual-studio-code/
+```
+
+
