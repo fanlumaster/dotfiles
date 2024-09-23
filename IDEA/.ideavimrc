@@ -69,18 +69,16 @@ map ge <Action>(ShowErrorDescription)
 " 将 gh 映射成鼠标悬浮在变量上方的时候显示文档
 map gh <Action>(QuickJavaDoc)
 
-" FJump 这里需要配合我的 FJump 插件来使用
-nmap <leader><leader>s :action FJumpAction<cr>
-nmap <leader><leader>w :action FJumpAction.Word0<cr>
-nmap <leader><leader>b :action FJumpAction.Word0<cr>
-nmap <leader><leader>e :action FJumpAction.WordEnd<cr>
-nmap <leader><leader>j :action FJumpAction.Line<cr>
-" FJump visual mode
-vmap <leader><leader>s :action FJumpAction<cr>
-vmap <leader><leader>w :action FJumpAction.Word0<cr>
-vmap <leader><leader>b :action FJumpAction.Word0<cr>
-vmap <leader><leader>e :action FJumpAction.WordEnd<cr>
-vmap <leader><leader>j :action FJumpAction.Line<cr>
+" KJump 这里需要配合我的 KJump 插件来使用
+nmap <leader><leader>s :action KJumpAction<cr>
+nmap <leader><leader>w :action KJumpAction.Word0<cr>
+nmap <leader><leader>b :action KJumpAction.Word0<cr>
+nmap <leader><leader>j :action KJumpAction.Line<cr>
+" KJump visual mode
+vmap <leader><leader>s :action KJumpAction<cr>
+vmap <leader><leader>w :action KJumpAction.Word0<cr>
+vmap <leader><leader>b :action KJumpAction.Word0<cr>
+vmap <leader><leader>j :action KJumpAction.Line<cr>
 
 " 解决 visual 选中的情况下只能粘贴一次的问题
 vmap p P
