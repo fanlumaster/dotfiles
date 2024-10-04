@@ -31,10 +31,16 @@ function cdnvimdata()
   Set-Location $env:LOCALAPPDATA/nvim-data
 }
 
-function gituser()
+function gitconfigfanlumaster()
 {
   git config user.name "fanlumaster"
   git config user.email "1730976608@qq.com"
+}
+
+function gitconfigsonnycalcr()
+{
+  git config user.name "sonnycalcr"
+  git config user.email "sonnycalcr@gmail.com"
 }
 
 function gitcm($msg)
@@ -50,4 +56,9 @@ function cdcaptures
 function cdpotplayercaptures
 {
   Set-Location "C:\Users\fanyfull\AppData\Roaming\PotPlayerMini64\Capture"
+}
+
+function uuidgen_pwsh
+{
+  & 'C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\uuidgen.exe'
 }
