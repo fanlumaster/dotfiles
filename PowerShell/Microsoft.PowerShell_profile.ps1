@@ -62,3 +62,19 @@ function uuidgen_pwsh
 {
   & 'C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\uuidgen.exe'
 }
+
+# build and run cpp in windows
+function llaunch
+{
+  .\llaunch.ps1
+}
+
+function lcompile
+{
+  .\lcompile.ps1
+}
+
+function lrun
+{
+  .\lrun.ps1
+}
