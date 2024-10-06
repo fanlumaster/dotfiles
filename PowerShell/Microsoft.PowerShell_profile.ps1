@@ -17,7 +17,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # Set shortcuts mode
 Set-PSReadLineOption -EditMode Emacs
 # use Alt + l to replace right arrow when we need to receive suggestion
-Set-PSReadLineKeyHandler -Chord "Alt+l" -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord "Alt+l" -Function ForwardChar # 接受一整行
+Set-PSReadLineKeyHandler -Chord "Alt+f" -Function ForwardWord # 步进一个单词
 # disable bell/beep sound
 Set-PSReadlineOption -BellStyle None
 
