@@ -1,0 +1,17 @@
+@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+configuration{
+    hide-scrollbar: true; /* 这个无用，实际是下面的 listview 中的 scrollbar 属性来控制 */
+}
+
+window {
+    width: 600px;
+    border-radius: 8px 8px 8px 8px;
+    border: 2px;
+    border-color: #746D69;
+}
+
+listview {
+    scrollbar:    false;
+    fixed-height: 20px;
+}
