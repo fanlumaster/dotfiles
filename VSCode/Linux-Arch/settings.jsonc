@@ -1,18 +1,14 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "vim.useSystemClipboard": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN', '微软雅黑', Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "workbench.startupEditor": "none",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  // "python.formatting.autopep8Args": [
-  //   "--ignore",
-  //   "E402"
-  // ],
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnsupportedDunderAll": "none"
   },
@@ -43,8 +39,8 @@
     }
   },
   // 光标的动画效果
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Source Han Sans CN',  '微软雅黑', Consolas, 'Courier New', monospace",
   "markdown.preview.fontFamily": "CaskaydiaCove NF Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
@@ -58,7 +54,6 @@
   },
   "[css]": {
     "editor.tabSize": 2,
-    // "editor.defaultFormatter": "stylelint.vscode-stylelint"
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[jsonc]": {
@@ -133,24 +128,6 @@
         }
       ]
     },
-    // run cmake project
-    // {
-    //   "before": [
-    //     "leader",
-    //     "l"
-    //   ],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.terminal.sendSequence",
-    //       "args": {
-    //         "text": "clear \u000D"
-    //       }
-    //     },
-    //     {
-    //       "command": "cmake.launchTarget"
-    //     }
-    //   ]
-    // },
     // 格式化代码
     {
       "before": [
@@ -160,8 +137,8 @@
       ],
       "commands": [
         {
-          "command": "editor.action.formatDocument",
-        },
+          "command": "editor.action.formatDocument"
+        }
       ]
     },
     {
@@ -212,20 +189,22 @@
         "workbench.action.files.saveWithoutFormatting"
       ]
     },
-    // 这个保存并格式化可以用 :w 来代替
-    // {
-    //   "before": [
-    //     "leader",
-    //     "q"
-    //   ],
-    //   "commands": [
-    //     ":w"
-    //   ]
-    // },
     {
       "before": [
         "leader",
         "leader",
+        "q"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.closeWindow"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q",
         "q"
       ],
       "commands": [
@@ -413,11 +392,6 @@
         }
       ]
     }
-    // {
-    //   "key": "ctrl+f5",
-    //   "command": "workbench.action.debug.run",
-    //   "when": "debuggersAvailable && debugState != 'initializing'"
-    // },
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -465,7 +439,14 @@
   // 扩展忽视建议
   "extensions.ignoreRecommendations": true,
   // cmake 配置
-  "cmake.configureOnOpen": true,
+  "cmake.configureOnOpen": false,
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmake.configureOnEdit": false,
   // 编辑器内联的建议
   "editor.inlineSuggest.enabled": true,
   // 关闭 terminal 中的多行粘贴的警告
@@ -485,18 +466,40 @@
   // 修改窗口的风格为系统原生风格
   "window.titleBarStyle": "custom",
   "window.dialogStyle": "custom",
-  "window.commandCenter": false,
+  "window.title": "🤖 📚 ✏️ 🧑🏻‍💻 💡 ️${dirty}${activeEditorMedium}${separator}${rootName}",
   "terminal.integrated.defaultProfile.linux": "fish",
-  "workbench.statusBar.visible": false,
   // 作用域的顶部给 sticky 住
   "editor.stickyScroll.enabled": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.smoothScrolling": true,
   "terminal.external.linuxExec": "kitty",
-  "apc.stylesheet": {
-    // ".monaco-workbench .part.editor>.content .editor-group-container>.title div.tabs-container": "border-radius: 5px; font-family: 'Times New Roman', Times, serif;",
-    // ".titlebar-left": "display: none !important;",
-    // ".titlebar-right": "display: none !important;",
-    ".xterm-decoration-overview-ruler": "width: 0px !important;",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.editor.enablePreview": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   },
+  "editor.cursorSmoothCaretAnimation": "on",
+  //~vscode animations
+  "animations.Enabled": true,
+  "animations.Install-Method": "Custom CSS and JS",
+  "animations.CursorAnimation": false,
+  "animations.CursorAnimationOptions": {
+    "Color": "#ffb6c1",
+    "CursorStyle": "block",
+    "TrailLength": 8
+  },
+  "animations.Smooth-Mode": false,
+  "animations.Default-Duration": 50,
+  "vscode_custom_css.imports": [
+    "file:///home/sonnycalcr/EDisk/HTMLCSSCodes/VSCodeCustomCSS/hide_titlebar.css"
+  ],
+  "window.customTitleBarVisibility": "auto",
+  //~vscode animations ends
+  "window.enableMenuBarMnemonics": false,
+  "window.customMenuBarAltFocus": false,
+  // use VSCode rendered custom titlebarm, not the desktop itself frame
+  "window.experimentalControlOverlay": false,
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden"
 }
