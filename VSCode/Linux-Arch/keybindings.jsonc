@@ -253,12 +253,12 @@
   {
     "key": "ctrl+down",
     "command": "workbench.action.decreaseViewWidth",
-    "when": "editorTextFocus && vim.mode == 'Normal'",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
   },
   // ctrl + 上箭头，增大当前的分屏 editor 的宽度
   {
     "key": "ctrl+up",
     "command": "workbench.action.increaseViewWidth",
-    "when": "editorTextFocus && vim.mode == 'Normal'",
-  },
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  }
 ]
