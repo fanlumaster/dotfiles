@@ -4,4 +4,6 @@ According to <https://github.com/fastfetch-cli/fastfetch/wiki/Logo-options>, we 
 yay -S imagemagic
 ```
 
+配置文件应放在：`~/.config/` 下。
+
 
