@@ -1,0 +1,116 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CaskaydiaCove Nerd Font", "Source Han Sans SC";
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0);
+    border-bottom: 0px;
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.9);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces {
+  margin: 0px 1px;
+  padding: 4px 0px 0px 0px;
+  border-radius: 8px;
+}
+
+#workspaces button {
+  border-radius: 8px;
+	transition: all 1s;
+	margin-left: 2;
+	margin-right: 2;
+	min-width: 20px;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	border: 2px solid transparent;
+	color: #B5E8E0;
+	background: rgb(78, 78, 78);
+}
+
+#workspaces button.active {
+	/*color: #FFB6C1; # 拉姆的发色*/
+  color: #ABE9B3;
+	border-color: #ABE9B3;
+}
+
+#workspaces button:hover {
+  transition: all .1s;
+  color: #E8A2AF;
+  border-color: #E8A2AF;
+}
+
+#mode, #battery {
+    padding: 0 10px;
+}
+
+#clock {
+    margin: 2px 2px;
+    padding: 0 15px;
+    border-radius: 8px;
+    background-color: rgba(43, 48, 59, 0.8);
+}
+
+#pulseaudio, #cpu, #memory, #temperature {
+  margin-right: 5px;
+}
+
+#pulseaudio {
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#window {
+    padding-left: 20em;
+    padding-right: 20em;
+    font-family: "Source Han Sans SC";
+    transition: all 1s;
+    /*color: #161320;*/
+    /*background: #87CEFA;*/
+    /*border-radius: 12px;*/
+    animation-name: fadeInOut, moveLeft300px, bounce;
+    animation-duration: 2.5s, 5s, 1s;
+    animation-iteration-count: 2, 1, 5;
+}
