@@ -1,0 +1,14 @@
+CompileFlags:
+  Add: [
+    "-std=c++17",
+    -I/usr/include/Fcitx5/Utils/,
+    -I/usr/include/Fcitx5/Utils/fcitx-utils/,
+    -I/usr/include/Fcitx5/Core/,
+    -I/usr/include/Fcitx5/Config/,
+    -I/usr/include/Fcitx5/Module/,
+    -I/usr/include/Fcitx5/Module/fcitx-module/punctuation/,
+    -I/usr/include/Fcitx5/Module/fcitx-module/quickphrase/,
+    -I/usr/include/Fcitx5/Module/fcitx-module/notifications/,
+    -I/usr/include/LibIME/,
+    -Wunused-variable,
+  ]
