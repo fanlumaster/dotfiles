@@ -1,3 +1,25 @@
+""" Common settings -------------------------
+set clipboard=unnamedplus
+" 设置可以在底部的 status bar 中显示 vim 的模式
+set showmode
+" scroll off 的行数设置成 0，这样在进行行跳转的时候，编辑器就不会自己进行器奇怪地滚动
+set so=0
+" 启用增量搜索
+set incsearch
+" 启用行号
+set nu
+
+""" Idea specific settings ------------------
+" 让 idea 的把两行加在一起的功能生效，smart join
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+" 关闭插件的蜂鸣声
+set visualbell
+" 打通系统剪贴板
+" set clipboard+=unnamed
+" 设置搜索结果高亮
+set hlsearch
 """" 由于 idea 的某种原因，这个文件似乎一开始就在 neovim 中去修改比较合适
 """ ideavim 默认给的 GitHub 上的 example 配置
 """ Map leader to space ---------------------
@@ -17,31 +39,33 @@ set ReplaceWithRegister
 set NERDTree
 " 启用 which-key，这个似乎会导致 idea 中的这个 ideavimrc 文件崩溃，虽然，继续去修改这个文件依然会让 idea 继续读取这个配置并生效
 " set which-key
+set highlightedyank
+
+" handler"
+sethandler <C-6> a:vim
+sethandler <C-S-6> a:vim
+sethandler <C-A> a:vim
+sethandler <C-B> a:ide
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:ide
+sethandler <C-G> a:ide
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:ide
+sethandler <C-K> a:ide
+sethandler <C-L> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:ide
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
-
-""" Common settings -------------------------
-" 设置可以在底部的 status bar 中显示 vim 的模式
-set showmode
-" scroll off 的行数设置成 0，这样在进行行跳转的时候，编辑器就不会自己进行器奇怪地滚动
-set so=0
-" 启用增量搜索
-set incsearch
-" 启用行号
-set nu
-
-""" Idea specific settings ------------------
-" 让 idea 的把两行加在一起的功能生效，smart join
-set ideajoin
-set ideastatusicon=gray
-set idearefactormode=keep
-" 关闭插件的蜂鸣声
-set visualbell
-" 打通系统剪贴板
-set clipboard+=unnamed
-" 设置搜索结果高亮
-set hlsearch
 
 """ Mappings --------------------------------
 " Shift + h 向左移动 tab 标签页
@@ -74,11 +98,13 @@ nmap <leader><leader>s :action KJumpAction<cr>
 nmap <leader><leader>w :action KJumpAction.Word0<cr>
 nmap <leader><leader>b :action KJumpAction.Word0<cr>
 nmap <leader><leader>j :action KJumpAction.Line<cr>
+nmap <leader><leader>k :action KJumpAction.Line<cr>
 " KJump visual mode
 vmap <leader><leader>s :action KJumpAction<cr>
 vmap <leader><leader>w :action KJumpAction.Word0<cr>
 vmap <leader><leader>b :action KJumpAction.Word0<cr>
 vmap <leader><leader>j :action KJumpAction.Line<cr>
+vmap <leader><leader>k :action KJumpAction.Line<cr>
 
 " 解决 visual 选中的情况下只能粘贴一次的问题
-vmap p P
+vnoremap p P
