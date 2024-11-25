@@ -2,6 +2,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": false,
   "vim.useSystemClipboard": true,
+  // 不要弹 confirm 窗口
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Mono', 'Source Han Sans CN', '微软雅黑', Consolas, 'Courier New', monospace",
@@ -18,16 +19,17 @@
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.tabSize": 2
   },
+  // 一些 unicode 的设置
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
     "zh-hant": true
   },
-  // 禁用 markdown 的自动补全
+  // markdown 的自动补全设置
   "[markdown]": {
     "editor.quickSuggestions": {
-      "other": "off",
-      "comments": "off",
-      "strings": "off"
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
     }
   },
   "[ahk]": {
@@ -44,12 +46,17 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Source Han Sans CN',  '微软雅黑', Consolas, 'Courier New', monospace",
   "markdown.preview.fontFamily": "CaskaydiaCove NF Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  // 自动检测缩进的宽度
   "editor.detectIndentation": false,
   // language specification
   "[javascript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
     "editor.tabSize": 2
   },
   "[css]": {
@@ -57,7 +64,8 @@
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[jsonc]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[json]": {
     "editor.tabSize": 2
@@ -77,9 +85,11 @@
   "[vue]": {
     "editor.tabSize": 2
   },
+  // 软换行
   "editor.wordWrap": "on",
+  // 执行 python 脚本时自动切换到脚本所在目录(但是我实际是没有用到的)
   "python.terminal.executeInFileDir": true,
-  "terminal.integrated.bellDuration": 100000,
+  // 不要高亮不可见的符号
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.unicodeHighlight.allowedCharacters": {
     "〇": true
@@ -95,14 +105,19 @@
     "statusBar.border": "#333a48"
   },
   "editor.minimap.autohide": true,
-  "editor.hideCursorInOverviewRuler": true,
+  // 在滚动中不要隐藏当前光标的位置
+  "editor.hideCursorInOverviewRuler": false,
   "editor.scrollbar.horizontal": "visible",
   "editor.scrollbar.vertical": "visible",
-  "editor.scrollbar.verticalScrollbarSize": 0, // hide the vertical scroll bar
-  "editor.scrollbar.horizontalScrollbarSize": 0, // hide the horizontal scroll bar
+  // "editor.scrollbar.verticalScrollbarSize": 0, // hide the vertical scroll bar
+  // "editor.scrollbar.horizontalScrollbarSize": 0, // hide the horizontal scroll bar
+  // 标题栏的一些快捷图标
   "workbench.layoutControl.enabled": false,
+  // 只背景高亮当前行，但是不高亮行号
   "editor.renderLineHighlight": "line",
-  "editor.occurrencesHighlight": "off",
+  // 高亮当前光标所在的单词以及同名的单词
+  "editor.occurrencesHighlight": "singleFile",
+  // 高亮选中内容
   "editor.selectionHighlight": false,
   // vim settings
   "vim.easymotion": true,
@@ -141,6 +156,7 @@
         }
       ]
     },
+    // 只有在当前文件是在左边的 explorer 中时才有效
     {
       "before": [
         "leader",
@@ -201,6 +217,7 @@
         }
       ]
     },
+    // 关闭 VSCode
     {
       "before": [
         "leader",
@@ -213,6 +230,7 @@
         }
       ]
     },
+    // 关闭当前的 tab
     {
       "before": [
         "leader",
@@ -224,6 +242,7 @@
         }
       ]
     },
+    // 控制左侧的活动栏的显示和隐藏
     {
       "before": [
         "leader",
@@ -235,6 +254,7 @@
         }
       ]
     },
+    // 控制底部 status 的显示和隐藏
     {
       "before": [
         "leader",
@@ -433,7 +453,10 @@
   "vim.easymotionMarkerForegroundColorOneChar": "#DF5452",
   // 关闭 snippet 的阻止快速建议的行为
   "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // 代码区域的竖直和水平的高亮条显示
+  "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,
+  "editor.bracketPairColorization.enabled": true,
   // 开启 vim-surround
   "vim.surround": true,
   // 扩展忽视建议
@@ -446,6 +469,7 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
+  // 在编辑的时候自动配置
   "cmake.configureOnEdit": false,
   // 编辑器内联的建议
   "editor.inlineSuggest.enabled": true,
@@ -455,15 +479,23 @@
   "window.zoomLevel": 1.0,
   // 关闭不明 unicode 字符的高亮
   "editor.unicodeHighlight.ambiguousCharacters": false,
+  // 关闭语法验证
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   // hidden breadcrumbs in editors
   "breadcrumbs.enabled": false,
+  // 渲染 white space
   "editor.renderWhitespace": "all",
+  // 标签栏的 close 图标的可见性
   "workbench.editor.tabActionCloseVisibility": true,
+  // menu bar 相关
   "window.menuBarVisibility": "hidden",
-  // 修改窗口的风格为系统原生风格
+  // 按住 alt 时 memu bar 的下划线
+  "window.enableMenuBarMnemonics": false,
+  // 按住 alt 时切换焦点到 menu bar
+  "window.customMenuBarAltFocus": false,
+  // 修改窗口的风格为自绘风格
   "window.titleBarStyle": "custom",
   "window.dialogStyle": "custom",
   "window.title": "🤖 📚 ✏️ 🧑🏻‍💻 💡 ️${dirty}${activeEditorMedium}${separator}${rootName}",
@@ -473,33 +505,17 @@
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.smoothScrolling": true,
   "terminal.external.linuxExec": "kitty",
-  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  // 使单击就可以在新标签页中打开文件
   "workbench.editor.enablePreview": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   "editor.cursorSmoothCaretAnimation": "on",
-  //~vscode animations
-  "animations.Enabled": true,
-  "animations.Install-Method": "Custom CSS and JS",
-  "animations.CursorAnimation": false,
-  "animations.CursorAnimationOptions": {
-    "Color": "#ffb6c1",
-    "CursorStyle": "block",
-    "TrailLength": 8
-  },
-  "animations.Smooth-Mode": false,
-  "animations.Default-Duration": 50,
-  "vscode_custom_css.imports": [
-    "file:///home/sonnycalcr/EDisk/HTMLCSSCodes/VSCodeCustomCSS/hide_titlebar.css"
-  ],
-  "window.customTitleBarVisibility": "auto",
-  //~vscode animations ends
-  "window.enableMenuBarMnemonics": false,
-  "window.customMenuBarAltFocus": false,
-  // use VSCode rendered custom titlebarm, not the desktop itself frame
+  // 在 hyprland 中，窗口内全屏不会出问题
   "window.experimentalControlOverlay": false,
+  // 控制中心
   "window.commandCenter": false,
-  "workbench.activityBar.location": "hidden"
+  // html 标签重命名会同步进行
+  "editor.linkedEditing": true,
+  // 输入法相关
+  "editor.experimentalEditContextEnabled": true
 }
