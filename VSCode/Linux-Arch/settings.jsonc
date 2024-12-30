@@ -54,7 +54,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.tabSize": 2
@@ -68,7 +69,8 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[json]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[lua]": {
     "editor.tabSize": 2
@@ -476,7 +478,7 @@
   // 关闭 terminal 中的多行粘贴的警告
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   // 窗口的缩放程度
-  "window.zoomLevel": 1.0,
+  "window.zoomLevel": 0.5,
   // 关闭不明 unicode 字符的高亮
   "editor.unicodeHighlight.ambiguousCharacters": false,
   // 关闭语法验证
@@ -517,5 +519,18 @@
   // html 标签重命名会同步进行
   "editor.linkedEditing": true,
   // 输入法相关
-  "editor.experimentalEditContextEnabled": true
+  "editor.experimentalEditContextEnabled": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.associations": {
+    "*.code-snippets": "json"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode_custom_css.imports": [
+    "file:///home/sonnycalcr/EDisk/CSSCodes/custom.css"
+  ]
 }
