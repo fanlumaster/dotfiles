@@ -1,9 +1,10 @@
-command = /opt/homebrew/bin/fish
+command = /usr/bin/fish
 background = 1a1b26
 foreground = c0caf5
 font-family = "CaskaydiaCove Nerd Font"
 font-family = "PingFang SC"
-custom-shader = shaders/bloom.glsl
+custom-shader = shaders/glow.glsl
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+window-decoration = false
