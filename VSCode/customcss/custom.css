@@ -1,0 +1,5 @@
+.monaco-editor.showUnused .squiggly-inline-unnecessary {
+  opacity: 1.0;
+  /*border-bottom: 1px dotted red;*/
+  color: #5b6d90;
+}
