@@ -81,8 +81,13 @@
   // vim settings
   {
     "key": "ctrl+j",
-    "command": "workbench.action.togglePanel",
+    "command": "workbench.action.navigateDown",
     "when": "editorTextFocus"
+  },
+  // do not toggle panel when forcus is at  bottom panel
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
   },
   {
     "key": "ctrl+j",
@@ -141,7 +146,7 @@
   },
   {
     "key": "ctrl+\\",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "command": "workbench.action.togglePanel"
   },
   // vim explorer settings
   // new file
