@@ -266,4 +266,8 @@
     "command": "workbench.action.increaseViewWidth",
     "when": "editorTextFocus && vim.mode == 'Normal'",
   },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
 ]

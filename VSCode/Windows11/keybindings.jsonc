@@ -110,16 +110,6 @@
     "when": "vim.active && inQuickOpen"
   },
   {
-    "key": "shift+h",
-    "command": "workbench.action.previousEditor",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  },
-  {
-    "key": "shift+l",
-    "command": "workbench.action.nextEditor",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  },
-  {
     "key": "ctrl+shift+h",
     "command": "workbench.action.focusLeftGroup"
   },
@@ -265,5 +255,9 @@
     "key": "ctrl+up",
     "command": "workbench.action.increaseViewWidth",
     "when": "editorTextFocus && vim.mode == 'Normal'",
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
   },
 ]
