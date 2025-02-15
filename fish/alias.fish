@@ -1,4 +1,5 @@
 alias cls="clear"
+alias clr="printf \033c"
 alias py="python"
 alias nide="neovide --fork"
 alias start="open"
@@ -58,24 +59,32 @@ function cdcppprimer
     cd ~/EDisk/CppCodes/CppPrimer5th/
 end
 
+function cddraft
+  cd ~/EDisk/DraftCodes/
+end
+
+function cdkitty
+  cd ~/.config/kitty/
+end
+
 function zfanime
     cd ~/EDisk/CppCodes/IMECodes/fcitx5-FanIME
 end
 
 # compile and run cpp binary files
 function llaunch
-    #/home/fanyfull/EDisk/AlgoCodes/leetcode-records/Cpp/llaunch.sh
-    ./llaunch.sh
+  #/home/fanyfull/EDisk/AlgoCodes/leetcode-records/Cpp/llaunch.sh
+  ./scripts/llaunch.sh
 end
 
 # compile cpp binary files
 function lcompile
-    ./lcompile.sh
+  ./scripts/lcompile.sh
 end
 
 # compile cpp binary files
 function lrun
-    ./lrun.sh
+  ./scripts/lrun.sh
 end
 
 # use .. to replace cd ../, and so on
