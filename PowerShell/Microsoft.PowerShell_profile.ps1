@@ -32,6 +32,16 @@ function cdnvimdata()
   Set-Location $env:LOCALAPPDATA/nvim-data
 }
 
+function cdhexo
+{
+  Set-Location ~/HDisk/Hexo/fanlumaster/source/
+}
+
+function cdhugo
+{
+  Set-Location ~/HDisk/Hugo/SonnyCalcr/
+}
+
 function gitconfigfanlumaster()
 {
   git config user.name "fanlumaster"
