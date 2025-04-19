@@ -494,7 +494,9 @@
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
-  "vscode_custom_css.imports": ["file:///C:/Users/SonnyCalcr/EDisk/CSSCodes/custom.css"],
+  "vscode_custom_css.imports": [
+    "file:///C:/Users/SonnyCalcr/EDisk/CSSCodes/custom.css"
+  ],
   // for neovim performance
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -504,4 +506,12 @@
   // set qt installation root path for QT plugins
   "qt-core.qtInstallationRoot": "C:\\Qt",
   "workbench.activityBar.location": "hidden",
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "explorer.confirmPasteNative": false,
+  "codeium.enableConfig": {
+    "markdown": true,
+    "*": true
+  }
 }
