@@ -28,6 +28,11 @@
     "zh-hans": true,
     "zh-hant": true
   },
+  "files.associations": {
+    ".clangd": "yaml",
+    ".clang-format": "yaml",
+    ".manifest": "xml"
+  },
   // 禁用 markdown 的自动补全
   "[markdown]": {
     "editor.quickSuggestions": {
@@ -35,6 +40,9 @@
       "comments": "off",
       "strings": "off"
     }
+  },
+  "[yaml]": {
+    "editor.indentSize": 2,
   },
   "[ahk]": {
     "files.encoding": "utf8bom",
@@ -53,10 +61,12 @@
   "editor.detectIndentation": false,
   // language specification
   "[javascript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[css]": {
     "editor.tabSize": 2,
@@ -64,10 +74,14 @@
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[jsonc]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.indentSize": 2,
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[json]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.indentSize": 2,
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[lua]": {
     "editor.tabSize": 2
@@ -474,8 +488,6 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  // hidden breadcrumbs in editors
-  "breadcrumbs.enabled": false,
   "editor.renderWhitespace": "all",
   "maven.executable.path": "C:\\FDisk\\Maven\\apache-maven-3.9.4\\bin\\mvn",
   "java.configuration.maven.globalSettings": "C:\\FDisk\\Maven\\apache-maven-3.9.4\\conf\\settings.xml",
@@ -486,10 +498,11 @@
   "window.titleBarStyle": "custom",
   "window.commandCenter": false,
   "editor.stickyScroll.enabled": false,
-  "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
-  "editor.experimentalEditContextEnabled": false,
+  // IME
+  "editor.experimentalEditContextEnabled": true,
+  // always open file in new tab instead of previewing
+  "workbench.editor.enablePreview": false,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
@@ -503,9 +516,13 @@
   },
   "cmake.automaticReconfigure": false,
   "cmake.configureOnEdit": false,
+  // "editor.snippetSuggestions": "top",
   // set qt installation root path for QT plugins
   "qt-core.qtInstallationRoot": "C:\\Qt",
-  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.inlayHints.enabled": "off",
+  "git.openRepositoryInParentFolders": "never",
+  "diffEditor.ignoreTrimWhitespace": true,
   "[snippets]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -513,5 +530,6 @@
   "codeium.enableConfig": {
     "markdown": true,
     "*": true
-  }
+  },
+  "codeium.enableCodeLens": false
 }
