@@ -1,7 +1,8 @@
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+@theme "/home/sonnycalcr/.config/rofi/android_notification_fany.rasi"
 
 configuration{
     hide-scrollbar: true; /* 这个无用，实际是下面的 listview 中的 scrollbar 属性来控制 */
+    font: "CaskaydiaCove Nerd Font 14";
 }
 
 window {
