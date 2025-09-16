@@ -34,7 +34,7 @@ function cdnvimdata() {
 }
 
 function cdime() {
-  Set-Location $env:LOCALAPPDATA/DeerwritingBrush/log
+  Set-Location $env:LOCALAPPDATA/MetasequoiaImeTsf
 }
 
 function cdhexo {
@@ -101,8 +101,8 @@ function rmForce($folder) {
   Remove-Item -Force -Recursive "$folder"
 }
 
-function cdBrush {
-  Set-Location("C:\Program Files\DeerWritingBrush")
+function cdMeta {
+  Set-Location("C:\Program Files\MetasequoiaImeTsf")
 }
 
 function refreshPath {
@@ -116,9 +116,13 @@ function refreshProfile {
 }
 
 function linstall {
-  sudo regsvr32 .\DeerWritingBrush.dll
+  sudo regsvr32 .\MetasequoiaImeTsf.dll
 }
 
 function luninstall {
-  sudo regsvr32 /u .\DeerWritingBrush.dll
+  sudo regsvr32 /u .\MetasequoiaImeTsf.dll
+}
+
+function lcopyMeta {
+  Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build64\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
 }
