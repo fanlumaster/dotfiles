@@ -544,5 +544,6 @@
     "commands": "on",
     "arguments": "on",
     "unknown": "off"
-  }
+  },
+  "window.border": ""
 }
