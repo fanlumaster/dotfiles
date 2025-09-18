@@ -114,7 +114,7 @@
     "statusBar.foreground": "#9b9b8f",
     "statusBar.border": "#333a48"
   },
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.showSlider": "mouseover",
   "editor.minimap.size": "fit",
   "editor.minimap.maxColumn": 180,
@@ -500,8 +500,10 @@
   "editor.stickyScroll.enabled": false,
   "workbench.iconTheme": "catppuccin-mocha",
   // IME
-  "editor.experimentalEditContextEnabled": true,
+  // "editor.experimentalEditContextEnabled": true,
   // always open file in new tab instead of previewing
+  // "editor.experimentalEditContextEnabled": true,
+  "editor.editContext": true,
   "workbench.editor.enablePreview": false,
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
@@ -528,8 +530,19 @@
   },
   "explorer.confirmPasteNative": false,
   "codeium.enableConfig": {
+    "*": true,
     "markdown": true,
-    "*": true
+    "xml": true,
+    "ignore": true
   },
-  "codeium.enableCodeLens": false
+  "codeium.enableCodeLens": false,
+  "python.createEnvironment.trigger": "off",
+  "chat.commandCenter.enabled": false,
+  "biome.suggestInstallingGlobally": false,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.quickSuggestions": {
+    "commands": "on",
+    "arguments": "on",
+    "unknown": "off"
+  }
 }

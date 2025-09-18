@@ -257,6 +257,22 @@
     "when": "editorTextFocus && vim.mode == 'Normal'",
   },
   {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+pageup",
+    "command": "workbench.action.previous"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "ctrl+shift+pagedown",
+    "command": "workbench.action.nextEditor"
+  },
+  {
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor",
   },
