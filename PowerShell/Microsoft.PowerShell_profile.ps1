@@ -10,6 +10,7 @@ Set-Alias -Name reboot -Value Restart-Computer
 Set-Alias -Name codm -Value codium
 Set-Alias -Name codi -Value codium
 Set-Alias -Name ff -Value fastfetch
+Set-Alias -Name agy -Value antigravity
 $env:HTTP_PROXY="http://127.0.0.1:7890"
 $env:HTTPS_PROXY="http://127.0.0.1:7890"
 $env:NO_PROXY="localhost,127.0.0.1,::1,192.168.0.0/16"
@@ -105,6 +106,10 @@ function cdMeta {
   Set-Location("C:\Program Files\MetasequoiaImeTsf")
 }
 
+function cdMeta32 {
+  Set-Location("C:\Program Files (x86)\MetasequoiaImeTsf")
+}
+
 function refreshPath {
   $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") +
   ";" +
@@ -125,4 +130,8 @@ function luninstall {
 
 function lcopyMeta {
   Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build64\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
+}
+
+function lcopyMeta32 {
+  Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build32\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
 }
