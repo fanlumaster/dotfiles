@@ -11,9 +11,9 @@ Set-Alias -Name codm -Value codium
 Set-Alias -Name codi -Value codium
 Set-Alias -Name ff -Value fastfetch
 Set-Alias -Name agy -Value antigravity
-$env:HTTP_PROXY="http://127.0.0.1:7890"
-$env:HTTPS_PROXY="http://127.0.0.1:7890"
-$env:NO_PROXY="localhost,127.0.0.1,::1,192.168.0.0/16"
+# $env:HTTP_PROXY="http://127.0.0.1:7890"
+# $env:HTTPS_PROXY="http://127.0.0.1:7890"
+# $env:NO_PROXY="localhost,127.0.0.1,::1,192.168.0.0/16"
 Invoke-Expression (&starship init powershell)
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # chcp 65001
@@ -27,111 +27,138 @@ Set-PSReadLineKeyHandler -Chord "Alt+f" -Function ForwardWord # 步进一个单�
 Set-PSReadlineOption -BellStyle None
 
 function cdnvim() {
-  Set-Location $env:LOCALAPPDATA/nvim
+    Set-Location $env:LOCALAPPDATA/nvim
 }
 
 function cdnvimdata() {
-  Set-Location $env:LOCALAPPDATA/nvim-data
+    Set-Location $env:LOCALAPPDATA/nvim-data
 }
 
 function cdime() {
-  Set-Location $env:LOCALAPPDATA/MetasequoiaImeTsf
+    Set-Location $env:LOCALAPPDATA/MetasequoiaImeTsf
 }
 
 function cdhexo {
-  Set-Location ~/HDisk/Hexo/fanlumaster/
+    Set-Location ~/HDisk/Hexo/fanlumaster/
 }
 
 function cdhugo {
-  Set-Location ~/HDisk/Hugo/SonnyCalcr/
+    Set-Location ~/HDisk/Hugo/SonnyCalcr/
 }
 
 function gitconfigfanlumaster() {
-  git config user.name "fanlumaster"
-  git config user.email "1730976608@qq.com"
+    git config user.name "fanlumaster"
+    git config user.email "1730976608@qq.com"
 }
 
 function gitconfigsonnycalcr() {
-  git config user.name "sonnycalcr"
-  git config user.email "sonnycalcr@gmail.com"
+    git config user.name "sonnycalcr"
+    git config user.email "sonnycalcr@gmail.com"
 }
 
 function gitcm($msg) {
-  git commit -m "$msg"
+    git commit -m "$msg"
 }
 
 function cdcaptures {
-  Set-Location "~\AppData\Roaming\PotPlayerMini64\Capture"
+    Set-Location "~\AppData\Roaming\PotPlayerMini64\Capture"
 }
 
 function cdpotplayercaptures {
-  Set-Location "~\AppData\Roaming\PotPlayerMini64\Capture"
+    Set-Location "~\AppData\Roaming\PotPlayerMini64\Capture"
 }
 
 function zdeerwritingbrush {
-  Set-Location "$HOME/EDisk/CppCodes/IMECodes/DeerWritingBrush"
+    Set-Location "$HOME/EDisk/CppCodes/IMECodes/DeerWritingBrush"
 }
 
 function uuidgen_pwsh {
-  & 'C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\uuidgen.exe'
+    & 'C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\uuidgen.exe'
 }
 
 # build and run cpp in windows
 function llaunch {
-  .\scripts\llaunch.ps1
+    .\scripts\llaunch.ps1
 }
 
 function lcompile {
-  .\scripts\lcompile.ps1
+    .\scripts\lcompile.ps1
 }
 
 function lrun {
-  .\scripts\lrun.ps1
+    .\scripts\lrun.ps1
 }
 
 
 function cdadb {
-  Set-Location("C:\Users\SonnyCalcr\AppData\Local\Android\Sdk\platform-tools")
+    Set-Location("C:\Users\SonnyCalcr\AppData\Local\Android\Sdk\platform-tools")
 }
 
 function openRecycleBin {
-  Start-Process shell:RecycleBinFolder
+    Start-Process shell:RecycleBinFolder
 }
 
 function rmForce($folder) {
-  Remove-Item -Force -Recursive "$folder"
+    Remove-Item -Force -Recursive "$folder"
 }
 
 function cdMeta {
-  Set-Location("C:\Program Files\MetasequoiaImeTsf")
+    Set-Location("C:\Program Files\MetasequoiaImeTsf")
 }
 
 function cdMeta32 {
-  Set-Location("C:\Program Files (x86)\MetasequoiaImeTsf")
+    Set-Location("C:\Program Files (x86)\MetasequoiaImeTsf")
 }
 
 function refreshPath {
-  $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") +
-  ";" +
-  [System.Environment]::GetEnvironmentVariable("Path","User")
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") +
+    ";" +
+    [System.Environment]::GetEnvironmentVariable("Path", "User")
 }
 
 function refreshProfile {
-  .$PROFILE
+    .$PROFILE
 }
 
 function linstall {
-  sudo regsvr32 .\MetasequoiaImeTsf.dll
+    sudo regsvr32 .\MetasequoiaImeTsf.dll
 }
 
 function luninstall {
-  sudo regsvr32 /u .\MetasequoiaImeTsf.dll
+    sudo regsvr32 /u .\MetasequoiaImeTsf.dll
 }
 
 function lcopyMeta {
-  Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build64\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
+    Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build64\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
 }
 
 function lcopyMeta32 {
-  Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build32\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
+    Copy-Item -Path "~\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf\build32\Debug\MetasequoiaImeTsf.dll" -Destination ".\"
+}
+
+#
+# For IME Codes 批量打开 IME 相关的项目
+#
+function lopenIMEProjects {
+    $projects = @(
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeTsf",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeServer",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeUiHtml",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeUiHtml\webview2\settings\ime-settings",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaVoiceInput",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaIME",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeDict",
+        "$env:USERPROFILE\EDisk\CppCodes\IMECodes\MetasequoiaImeLog"
+    )
+    
+    foreach ($path in $projects) {
+        if (Test-Path $path) {
+            Write-Host "Open $path" -ForegroundColor Green
+            code $path
+        }
+        else {
+            Write-Host "Path not exists: $path" -ForegroundColor Red
+        }
+    }
 }
